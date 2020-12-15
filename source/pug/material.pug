@@ -36,19 +36,21 @@ html(lang="es")
                             .card-body
 
                                 ul.list-group.list-group-flush.list.my-n3.nav-temas
-                                    +navTemaItem('1', 'Actividad productiva', '#tema-1')
-                                    +navTemaItem('2', 'Herramientas para el procesamiento de datos y metodología estadística', '#tema-2')
+                                    +navTemaItem('text', 'Introducción', '#introduccion')
+                                    +navTemaItem('1', 'Fundamentos de seguridad y salud en el trabajo', '#tema-1')
+                                    +navTemaItem('2', 'Fundamentos de medio ambiente', '#tema-2')
                                     +navTemaItem('glosary', 'Glosario', '#glosario')
                                     +navTemaItem('folder', 'Material complementario', '#anexos')
                                     +navTemaItem('references', 'Referencias bibliográficas', '#referencias')
 
 
         section#mainContent         
+            #introduccion
+                include pages/introduccion.pug
             #tema-1
                 include pages/tema-1.pug
             #tema-2
-                include pages/tema-2.pug
-                                        
+                include pages/tema-2.pug                
             #glosario
                 include pages/glosario.pug
             #anexos
